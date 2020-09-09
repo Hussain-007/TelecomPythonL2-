@@ -4,3 +4,13 @@ Write a program to handle following exceptions using Try block.
       b) ValueError
 
 '''
+try:
+    myfile = open("output.txt", "r", encoding='utf-8')
+    print(myfile.read())
+except IOError:
+    print("Writing mode is not allowed")
+#b
+try:
+    n = int(input("Enter value:"))
+except ValueError:
+    print("ValueError")
