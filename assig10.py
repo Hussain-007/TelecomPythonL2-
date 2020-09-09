@@ -40,9 +40,16 @@ def binarySearch(list1, item):
 
 
 def list_rev(l):
-    print(l.reverse())
-    print("reversed:", l)
+    reversed_list = sorted(l, reverse=True)
+    print("reversed:", reversed_list)
 
 
-list_sort([23, 81, 42, 51, 31])
-print("binarySearch([23,81,42,51,31]):", binarySearch([23, 81, 42, 51, 31], 42))
+if __name__ == '__main__':
+    aList = [23, 81, 42, 51, 31]
+    finder = 42
+    list_rev(aList)
+    list_sort(aList)
+    if binarySearch(aList, finder):
+        print(f"{finder} is Present in list{aList}")
+    else:
+        print(f"{finder} is NOT Present in list{aList}")
